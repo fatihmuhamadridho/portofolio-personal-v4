@@ -1,0 +1,37 @@
+.navbar, .navbar_list ul, .navbar_profile {
+    display: flex;
+    align-items: center;
+}
+
+.navbar {
+    width: 100%;
+    padding: 20px;
+    position: fixed;
+    justify-content: space-between;
+    background-color: #242424;
+    color: white;
+    z-index: 1;
+
+    * {
+        margin: 0px; padding: 0px;
+    }
+
+    &_logo {
+        width: 85px;
+    }
+
+    &_list {
+        ul {
+            list-style: none;
+
+            li {
+                padding: 0px 30px 0px 30px;
+            }
+        }
+    }
+
+    &_profile_image {
+        width: 35px;
+        margin-left: 40px;
+    }
+}

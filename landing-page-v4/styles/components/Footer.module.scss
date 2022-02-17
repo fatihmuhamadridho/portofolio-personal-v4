@@ -1,0 +1,18 @@
+.footer {
+    display: flex;
+    background-color: #242424;
+    
+    * {
+        color: white;
+    }
+
+    &_profile {
+
+        &_socialmedia {
+            display: flex;
+            p {
+                padding: 10px;
+            }
+        }
+    }
+}
