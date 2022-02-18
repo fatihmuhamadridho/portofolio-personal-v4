@@ -1,18 +1,39 @@
 .footer {
+    margin-bottom: 40px; padding: 0px 90px;
     display: flex;
     background-color: #242424;
     
     * {
+        margin: 0px; padding: 0px;
         color: white;
     }
 
     &_profile {
+        margin-right: 80px;
 
         &_socialmedia {
             display: flex;
-            p {
-                padding: 10px;
+
+            svg {
+                width: 35px; height: 35px;
+                margin: 15px 25px 0px 0px;
+                cursor: pointer;
             }
         }
     }
+
+    &_detail {
+        display: grid;
+        grid-template-columns: 185px 185px 185px;
+        gap: 20px;
+
+        ul li {
+            list-style: none;
+            margin-bottom: 12px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19px;
+        }   
+    }
+
 }

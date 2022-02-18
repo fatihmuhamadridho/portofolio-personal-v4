@@ -11,7 +11,7 @@ export default function Navbar() {
 
     return (
         <div className={styles.navbar}>
-            <a className={styles.navbar_logo}>
+            <a href='' className={styles.navbar_logo}>
                 <Image
                     src={"/favicon.ico"}
                     alt=''

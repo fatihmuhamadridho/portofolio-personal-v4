@@ -10,8 +10,10 @@ import {
   faSortDown,
   faXmark,
 } from '@fortawesome/free-solid-svg-icons'
+import $ from 'jquery'
 
 const Home: NextPage = () => {
+
   return (
     <div className={styles.layout}>
       <Head>
@@ -41,26 +43,26 @@ const Home: NextPage = () => {
                   <p style={{ color: "white", fontSize: "24px", fontWeight: "700", lineHeight: "32px" }}>Find a ride now</p>
                   <div style={{ display: "flex", cursor: "pointer" }}>
                     <p style={{ color: "white", fontSize: "14px", fontWeight: "400", lineHeight: "20px" }}>Ride now</p>
-                    <FontAwesomeIcon icon={faSortDown} style={{ marginLeft: "10px", color: "white" }} />
+                    <FontAwesomeIcon icon={faSortDown} style={{ width: "15px", height: "15px", marginLeft: "10px", color: "white" }} />
                   </div>
                 </div>
                 <div style={{ marginTop: "5px", display: "flex", flexDirection: "column" }}>
                   <div className={styles.section1_content_booking_fill_input}>
-                    <p>Your Pickup</p>
-                    <input type="text" placeholder='Current Location' />
-                    <FontAwesomeIcon icon={faXmark} style={{ position: "absolute", color: "white", transform: "translateX(480px) translateY(-35px)" }} />
-                    <FontAwesomeIcon icon={faSortDown} style={{ position: "absolute", transform: "translateX(510px) translateY(-40px)", color: "white" }} />
+                    <p >Your Pickup</p>
+                    <input type="text" placeholder='Current Location' id='current' />
+                    <FontAwesomeIcon icon={faXmark} style={{ width: "18px", height: "18px", position: "absolute", color: "white", transform: "translateX(480px) translateY(-35px)" }} />
+                    <FontAwesomeIcon icon={faSortDown} style={{ width: "18px", height: "18px", position: "absolute", transform: "translateX(510px) translateY(-40px)", color: "white" }} />
                   </div>
                   <div className={styles.section1_content_booking_fill_input}>
                     <p>Your Destination</p>
-                    <input type="text" placeholder='Target Location' />
-                    <FontAwesomeIcon icon={faXmark} style={{ position: "absolute", color: "white", transform: "translateX(480px) translateY(-35px)" }} />
-                    <FontAwesomeIcon icon={faSortDown} style={{ position: "absolute", transform: "translateX(510px) translateY(-40px)", color: "white" }} />
+                    <input type="text" placeholder='Target Location' id='target' />
+                    <FontAwesomeIcon icon={faXmark} style={{ width: "18px", height: "18px", position: "absolute", color: "white", transform: "translateX(480px) translateY(-35px)" }} />
+                    <FontAwesomeIcon icon={faSortDown} style={{ width: "18px", height: "18px", position: "absolute", transform: "translateX(510px) translateY(-40px)", color: "white" }} />
                   </div>
                 </div>
                 <div style={{ height: "55px", marginTop: "15px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                   <div className={styles.section1_content_booking_fill_button}>
-                    <FontAwesomeIcon icon={faSearch} />
+                    <FontAwesomeIcon icon={faSearch} style={{ width: "18px", height: "18px" }} />
                     <button>FIND A DRIVER</button>
                   </div>
                   <p style={{ fontSize: "14px", fontWeight: "500", lineHeight: "16px", color: "#FBA403", cursor: "pointer" }}>MORE OPTIONS</p>
@@ -127,81 +129,78 @@ const Home: NextPage = () => {
             </div>
             <div className={styles.section2_sub2_content}>
               <div className={styles.section2_sub2_content_part1}>
-                <div style={{ width: "300px" }}>
+                <div>
                   <Image
                     src={"/Car1.png"}
                     alt=""
-                    width={"100%"}
-                    height={"100%"}
-                    layout="responsive"
-                    objectFit='contain'
+                    width={"300px"}
+                    height={"200px"}
                   />
+                  <div style={{ padding: "15px" }}>
+                    <p style={{ fontWeight: "500" }}>Basic</p>
+                    <p style={{ fontWeight: "400", color: "#B3B3B3" }}>The best balance of price and comfort. You will not go wrong with our basic rides.</p>
+                  </div>
                 </div>
-                <p>Basic</p>
-                <p>The best balance of price and comfort. You will not go wrong with our basic rides.</p>
-                <p>LEARN MORE</p>
+                <p style={{ padding: "15px", display: "flex", justifyContent: "flex-end", color: "#FBA403" }}><a href="">LEARN MORE</a></p>
               </div>
               <div className={styles.section2_sub2_content_part2}>
-                <div style={{ width: "300px" }}>
+                <div>
                   <Image
                     src={"/Car2.png"}
                     alt=""
-                    width={"100%"}
-                    height={"100%"}
-                    layout="responsive"
-                    objectFit='contain'
+                    width={"300px"}
+                    height={"200px"}
                   />
+                  <div style={{ padding: "15px" }}>
+                    <p style={{ fontWeight: "500" }}>Comfort</p>
+                    <p style={{ fontWeight: "400", color: "#B3B3B3" }}>If comfort is your priority, this is the ride for you. It’s spacious and packed with features.</p>
+                  </div>
                 </div>
-                <p>Comfort</p>
-                <p>If comfort is your priority, this is the ride for you. It’s spacious and packed with features.</p>
-                <p style={{ display: "flex", justifyContent: "flex-end" }}>LEARN MORE</p>
+                <p style={{ padding: "15px", display: "flex", justifyContent: "flex-end", color: "#FBA403" }}><a href="">LEARN MORE</a></p>
               </div>
               <div className={styles.section2_sub2_content_part3}>
-                <div style={{ width: "300px" }}>
+                <div>
                   <Image
                     src={"/Car3.png"}
                     alt=""
-                    width={"100%"}
-                    height={"100%"}
-                    layout="responsive"
-                    objectFit='contain'
+                    width={"300px"}
+                    height={"200px"}
                   />
+                  <div style={{ padding: "15px" }}>
+                    <p style={{ fontWeight: "500" }}>Business</p>
+                    <p style={{ fontWeight: "400", color: "#B3B3B3" }}>Do you want to travel around the city in style? Make sure to select or business class rides.</p>
+                  </div>
                 </div>
-                <p>Business</p>
-                <p>Do you want to travel around the city in style? Make sure to select or business class rides.</p>
-                <p>LEARN MORE</p>
+                <p style={{ padding: "15px", display: "flex", justifyContent: "flex-end", color: "#FBA403" }}><a href="">LEARN MORE</a></p>
               </div>
               <div className={styles.section2_sub2_content_part4}>
-                <div style={{ width: "300px" }}>
+                <div>
                   <Image
                     src={"/Car4.png"}
                     alt=""
-                    width={"100%"}
-                    height={"100%"}
-                    layout="responsive"
-                    objectFit='contain'
+                    width={"300px"}
+                    height={"200px"}
                   />
+                  <div style={{ padding: "15px" }}>
+                    <p style={{ fontWeight: "500" }}>Deluxe</p>
+                    <p style={{ fontWeight: "400", color: "#B3B3B3" }}>The best ride for luxury and comfort. No compromises here. You’ll surely get what you pay for.</p>
+                  </div>
                 </div>
-                <p>Deluxe</p>
-                <p>The best ride for luxury and comfort. No compromises here. You’ll surely get what you pay for.</p>
-                <p>LEARN MORE</p>
+                <p style={{ padding: "15px", display: "flex", justifyContent: "flex-end", color: "#FBA403" }}><a href="">LEARN MORE</a></p>
               </div>
             </div>
           </div>
           <div className={styles.section2_sub3}>
-            <div className={styles.section2_sub3_image} style={{ width: "100px" }}>
-              <Image
-                src={"/Car_icon.png"}
-                alt=""
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-                objectFit='contain'
-              />
-            </div>
+            <Image
+              src={"/Car_icon.png"}
+              alt=""
+              width={"280px"}
+              height={"190px"}
+              priority
+            />
             <div className={styles.section2_sub3_content}>
-              <p>Become a Driver</p>
-              <p>Be a part of a growing community of myRiders. Register as a driver and don’t forget to register your car as well.</p>
+              <p style={{ fontSize: "32px", fontWeight: "700", lineHeight: "40px" }}>Become a Driver</p>
+              <p style={{ fontSize: "16px", fontWeight: "400", lineHeight: "26px", color: "#B3B3B3" }}>Be a part of a growing community of myRiders. Register as a driver and don’t forget to register your car as well.</p>
             </div>
             <button>REGISTER NOW</button>
           </div>
