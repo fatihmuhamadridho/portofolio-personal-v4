@@ -19,7 +19,7 @@ export default function Footer() {
                             alt=""
                             width={"120px"}
                             height={"60px"}
-                            priority
+                            objectFit="contain"
                         />
                     </a>
                 </div>
