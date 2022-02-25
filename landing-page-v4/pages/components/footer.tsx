@@ -15,7 +15,7 @@ export default function Footer() {
                 <div className={styles.footer_profile_icon}>
                     <a href="">
                         <Image
-                            src={"/MyRide_icon.png"}
+                            src={"/Myride_icon.png"}
                             alt=""
                             width={"120px"}
                             height={"60px"}
